@@ -154,11 +154,11 @@ const Navbar = () => {
             </nav>
 
             {/* Custom CSS */}
-            <style jsx>{`
+            <style>{`
                 .announcement-bar {
                     background: linear-gradient(90deg, #0d6efd, #6c63ff);
                 }
-                
+
                 nav {
                     background: rgba(0, 0, 0, 0.8);
                     backdrop-filter: blur(10px);
@@ -166,25 +166,25 @@ const Navbar = () => {
                     padding-top: 0.5rem;
                     padding-bottom: 0.5rem;
                 }
-                
+
                 nav.scrolled {
                     background: rgba(0, 0, 0, 0.95);
                     padding-top: 0.25rem;
                     padding-bottom: 0.25rem;
                 }
-                
+
                 .navbar-brand {
                     position: relative;
                     overflow: hidden;
                     transition: all 0.3s ease;
                 }
-                
+
                 .logo-icon {
                     font-size: 1.75rem;
                     color: #6c63ff;
                     transition: all 0.3s ease;
                 }
-                
+
                 .brand-text {
                     font-size: 1.75rem;
                     font-weight: 700;
@@ -193,26 +193,26 @@ const Navbar = () => {
                     -webkit-text-fill-color: transparent;
                     transition: all 0.3s ease;
                 }
-                
+
                 .navbar-brand.hovered .logo-icon {
                     transform: rotate(15deg) scale(1.1);
                 }
-                
+
                 .navbar-brand.hovered .brand-text {
                     background: linear-gradient(90deg, #0d6efd, #6c63ff);
                 }
-                
+
                 .nav-link {
                     color: rgba(255, 255, 255, 0.8);
                     transition: all 0.3s ease;
                     position: relative;
                     padding: 0.5rem 1rem;
                 }
-                
+
                 .nav-link:hover, .nav-link.active {
                     color: white;
                 }
-                
+
                 .nav-underline {
                     height: 2px;
                     width: 0;
@@ -223,12 +223,12 @@ const Navbar = () => {
                     transform: translateX(-50%);
                     transition: all 0.3s ease;
                 }
-                
+
                 .nav-link:hover .nav-underline, 
                 .nav-link.active .nav-underline {
                     width: 70%;
                 }
-                
+
                 .navbar-toggler {
                     position: relative;
                     width: 30px;
@@ -236,7 +236,7 @@ const Navbar = () => {
                     background: transparent;
                     padding: 0;
                 }
-                
+
                 .navbar-toggler-line {
                     display: block;
                     width: 100%;
@@ -245,29 +245,29 @@ const Navbar = () => {
                     margin: 6px 0;
                     transition: all 0.3s ease;
                 }
-                
+
                 .navbar-toggler.open .navbar-toggler-line:nth-child(1) {
                     transform: rotate(45deg) translate(5px, 5px);
                 }
-                
+
                 .navbar-toggler.open .navbar-toggler-line:nth-child(2) {
                     opacity: 0;
                 }
-                
+
                 .navbar-toggler.open .navbar-toggler-line:nth-child(3) {
                     transform: rotate(-45deg) translate(5px, -5px);
                 }
-                
+
                 .search-container {
                     position: relative;
                     width: 200px;
                     transition: all 0.3s ease;
                 }
-                
+
                 .search-container.open {
                     width: 250px;
                 }
-                
+
                 .search-input {
                     background: rgba(255, 255, 255, 0.1);
                     border: none;
@@ -275,13 +275,13 @@ const Navbar = () => {
                     padding-right: 40px;
                     border-radius: 50px;
                 }
-                
+
                 .search-input:focus {
                     background: rgba(255, 255, 255, 0.15);
                     box-shadow: none;
                     color: white;
                 }
-                
+
                 .search-btn {
                     position: absolute;
                     right: 0;
@@ -291,7 +291,7 @@ const Navbar = () => {
                     border: none;
                     color: rgba(255, 255, 255, 0.7);
                 }
-                
+
                 .mobile-search {
                     position: absolute;
                     top: 100%;
@@ -302,7 +302,7 @@ const Navbar = () => {
                     z-index: 1000;
                     display: flex;
                 }
-                
+
                 .mobile-search input {
                     flex: 1;
                     background: rgba(255, 255, 255, 0.1);
@@ -310,14 +310,14 @@ const Navbar = () => {
                     color: white;
                     padding: 0.5rem 1rem;
                 }
-                
+
                 .btn-close-search {
                     background: transparent;
                     border: none;
                     color: white;
                     margin-left: 0.5rem;
                 }
-                
+
                 .btn-icon {
                     color: rgba(255, 255, 255, 0.8);
                     background: transparent;
@@ -326,12 +326,12 @@ const Navbar = () => {
                     padding: 0.5rem;
                     transition: all 0.3s ease;
                 }
-                
+
                 .btn-icon:hover {
                     color: white;
                     transform: translateY(-2px);
                 }
-                
+
                 .cart-badge {
                     position: absolute;
                     top: -5px;
@@ -347,23 +347,23 @@ const Navbar = () => {
                     font-size: 0.7rem;
                     font-weight: bold;
                 }
-                
+
                 .dropdown-menu {
                     background: rgba(0, 0, 0, 0.9);
                     border: 1px solid rgba(255, 255, 255, 0.1);
                     backdrop-filter: blur(10px);
                 }
-                
+
                 .dropdown-item {
                     color: rgba(255, 255, 255, 0.8);
                     transition: all 0.3s ease;
                 }
-                
+
                 .dropdown-item:hover {
                     color: white;
                     background: rgba(255, 255, 255, 0.1);
                 }
-                
+
                 @media (max-width: 991.98px) {
                     .navbar-collapse {
                         padding: 1rem;
@@ -371,7 +371,7 @@ const Navbar = () => {
                         margin-top: 1rem;
                         border-radius: 0.5rem;
                     }
-                    
+
                     .nav-item {
                         margin: 0.5rem 0;
                     }
